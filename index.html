@@ -8,8 +8,25 @@ the canvas, sorry about that!</canvas>
   // canvas stuff
   var c = document.getElementById("mainCanvas");
   var ctx = c.getContext("2d");
+  
+  // fill canvas
   ctx.fillStyle = "#E6E6E6";
   ctx.fillRect(0,0,480,360);
+ 
+  // color select bar
+  ctx.fillStyle = "#FFFFFF";
+  ctx.fillRect(22,22,33,33);
+  ctx.fillStyle = "#00FF00";
+  ctx.fillRect(58,22,33,33);
+  ctx.fillStyle = "#FF0000";
+  ctx.fillRect(94,22,33,33);
+  ctx.fillStyle = "#0000FF";
+  ctx.fillRect(130,22,33,33);
+  ctx.fillStyle = "#FF9900";
+  ctx.fillRect(166,22,33,33);
+  ctx.fillStyle = "#FFFF00";
+  ctx.fillRect(202,22,33,33);
+  
   // algorithms for M2 targets
   m2a = "M2";
   m2b = "R' U R U' M2 U R' U' R";
