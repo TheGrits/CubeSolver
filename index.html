@@ -14,17 +14,18 @@ the canvas, sorry about that!</canvas>
   ctx.fillRect(0,0,480,360);
  
   // color select bar
-  ctx.fillStyle = "#FFFFFF";
+  var colourSelected;
+  ctx.fillStyle = "#FFFFFF"; // white
   ctx.fillRect(1,1,22,22);
-  ctx.fillStyle = "#00FF00";
+  ctx.fillStyle = "#00FF00"; // green
   ctx.fillRect(26,1,22,22);
-  ctx.fillStyle = "#FF0000";
+  ctx.fillStyle = "#FF0000"; // red
   ctx.fillRect(51,1,22,22);
-  ctx.fillStyle = "#0000FF";
+  ctx.fillStyle = "#0000FF"; // blue
   ctx.fillRect(76,1,22,22);
-  ctx.fillStyle = "#FF9900";
+  ctx.fillStyle = "#FF9900"; // orange
   ctx.fillRect(101,1,22,22);
-  ctx.fillStyle = "#FFFF00";
+  ctx.fillStyle = "#FFFF00"; // yellow
   ctx.fillRect(126,1,22,22);
   
   // algorithms for M2 targets
@@ -59,6 +60,23 @@ the canvas, sorry about that!</canvas>
   }
   c.addEventListener('onclick', function(evt) {
     var mousePos = getMousePos(c, evt);
+    if (mousePos.y < 24){
+      if (mousePos.x < 149){
+        if (mousePos.x > 125){
+          colourSelected = "Yellow";
+        } else if (mousePos.x > 100){
+          colourSelected = "Orange";
+        } else if (mousePos.x > 75){
+          colourSelected = "Blue";
+        } else if (mousePos.x > 50){
+          colourSelected = "Red";
+        } else if (mousePos.x > 25){
+          colourSelected = "Green";
+        } else if (mousePos.x > 0){
+          colourSelected = "White";
+        }
+      }
+    }
   }, false);
 </script>
 </body>
