@@ -4,6 +4,7 @@
 <body>
 <canvas id="mainCanvas" height="360" width="480" style="border:1px solid #000000;">Something went wrong with \
 the canvas, sorry about that!</canvas>
+<p id="p1">Color Selected:</p>
 <script>
   // canvas stuff
   var c = document.getElementById("mainCanvas");
@@ -76,6 +77,7 @@ the canvas, sorry about that!</canvas>
           colourSelected = "White";
         }
       }
+      document.getElementById("p1").innerHTML = "Colour Selected: " + colourSelected;
     }
   }, false);
 </script>
