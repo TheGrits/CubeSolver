@@ -59,7 +59,7 @@ the canvas, sorry about that!</canvas>
       y: evt.clientY - rect.top
     };
   }
-  c.addEventListener('onclick', function(evt) {
+  c.addEventListener('click', function(evt) {
     var mousePos = getMousePos(c, evt);
     if (mousePos.y < 24){
       if (mousePos.x < 149){
