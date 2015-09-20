@@ -30,9 +30,26 @@ the canvas, sorry about that!</canvas>
   ctx.fillRect(126,1,22,22);
   
   // render the cube layout
-  var cubeLayout = [];
+  var cubeLayout = [1,1,1,1,1,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6];
   function renderCube(){
-    
+    var i = 1;
+  }
+  
+  // change from number to colour
+  function convert(x){
+    if (x == 1){
+      return "#FFFFFF";
+    } else if (x == 2){
+      return "#00FF00";
+    } else if (x == 3){
+      return "#FF0000";
+    } else if (x == 4){
+      return "0000FF";
+    } else if (x == 5){
+      return "FF9900";
+    } else if (x == 6){
+      return "FFFF00";
+    }
   }
   
   // algorithms for M2 targets
