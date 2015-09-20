@@ -4,7 +4,7 @@
 <body>
 <canvas id="mainCanvas" height="360" width="480" style="border:1px solid #000000;">Something went wrong with \
 the canvas, sorry about that!</canvas>
-<p id="p1">Color Selected:</p>
+<p id="p1">Color Selected: White</p>
 <script>
   // canvas stuff
   var c = document.getElementById("mainCanvas");
@@ -15,7 +15,7 @@ the canvas, sorry about that!</canvas>
   ctx.fillRect(0,0,480,360);
  
   // color select bar
-  var colourSelected;
+  var colourSelected = "White";
   ctx.fillStyle = "#FFFFFF"; // white
   ctx.fillRect(1,1,22,22);
   ctx.fillStyle = "#00FF00"; // green
@@ -28,6 +28,12 @@ the canvas, sorry about that!</canvas>
   ctx.fillRect(101,1,22,22);
   ctx.fillStyle = "#FFFF00"; // yellow
   ctx.fillRect(126,1,22,22);
+  
+  // render the cube layout
+  var cubeLayout = [];
+  function renderCube(){
+    
+  }
   
   // algorithms for M2 targets
   m2a = "M2";
@@ -52,6 +58,8 @@ the canvas, sorry about that!</canvas>
   m2v = "U R2 U' M2 U R2 U'";
   m2w = "M U2 M U2";
   m2x = "U' L2 U M2 U' L2 U";
+  
+  // click detection scripting
   function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
     return {
