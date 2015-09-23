@@ -34,14 +34,7 @@ the canvas, sorry about that!</canvas>
   var cubeLayout = [1,1,1,1,1,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6];
   function renderCube(){
     renderCenters();
-    //var i = 1;
-    //var x = 61;
-    //var y = 80;
-    //var clr = convert(cubeLayout[i]);
-    //for (z = 1; z < 5; z++){
-     // ctx.fillStyle = clr;
-      
-    //}
+    
   }
   
   // render the cube centers
@@ -59,7 +52,6 @@ the canvas, sorry about that!</canvas>
     ctx.fillStyle = "#FFFF00"; // yellow
     ctx.fillRect(108,245,26,26);
   }
-  
   // change from number to colour
   function convert(x){
     if (x == 1){
@@ -78,28 +70,28 @@ the canvas, sorry about that!</canvas>
   }
   
   // algorithms for M2 targets
-  m2a = "M2";
-  m2b = "R' U R U' M2 U R' U' R";
-  m2c = "U2 M' U2 M'";
-  m2d = "L U' L' U M2 U' L U L'";
-  m2e = "B L' B' M2 B L B'";
-  m2f = "B L2 B' M2 B L2 B'";
-  m2g = "B L B' M2 B L' B'";
-  m2h = "L' B L B' M2 B L' B' L";
-  m2i = "D M' U R2 U' M U R2 U' D' M2";
-  m2j = "U R U' M2 U R' U'";
-  m2l = "U' L' U M2 U' L U";
-  m2m = "B' R B M2 B' R' B";
-  m2n = "R B' R' B M2 B' R B R'";
-  m2o = "B' R' B M2 B' R B";
-  m2p = "B' R2 B M2 B' R2 B";
-  m2q = "B' R B U R2 U' M2 U R2 U' B' R' B";
-  m2r = "U' L U M2 U' L' U";
-  m2s = "M2 D U R2 U' M' U R2 U' M D'";
-  m2t = "U R' U' M2 U R U'";
-  m2v = "U R2 U' M2 U R2 U'";
-  m2w = "M U2 M U2";
-  m2x = "U' L2 U M2 U' L2 U";
+  var m2a = "M2";
+  var m2b = "R' U R U' M2 U R' U' R";
+  var m2c = "U2 M' U2 M'";
+  var m2d = "L U' L' U M2 U' L U L'";
+  var m2e = "B L' B' M2 B L B'";
+  var m2f = "B L2 B' M2 B L2 B'";
+  var m2g = "B L B' M2 B L' B'";
+  var m2h = "L' B L B' M2 B L' B' L";
+  var m2i = "D M' U R2 U' M U R2 U' D' M2";
+  var m2j = "U R U' M2 U R' U'";
+  var m2l = "U' L' U M2 U' L U";
+  var m2m = "B' R B M2 B' R' B";
+  var m2n = "R B' R' B M2 B' R B R'";
+  var m2o = "B' R' B M2 B' R B";
+  var m2p = "B' R2 B M2 B' R2 B";
+  var m2q = "B' R B U R2 U' M2 U R2 U' B' R' B";
+  var m2r = "U' L U M2 U' L' U";
+  var m2s = "M2 D U R2 U' M' U R2 U' M D'";
+  var m2t = "U R' U' M2 U R U'";
+  var m2v = "U R2 U' M2 U R2 U'";
+  var m2w = "M U2 M U2";
+  var m2x = "U' L2 U M2 U' L2 U";
   
   // click detection scripting
   function getMousePos(canvas, evt) {
