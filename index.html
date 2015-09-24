@@ -53,6 +53,23 @@ the canvas, sorry about that!</canvas>
     
   }
   
+  // converts numbers into colours
+  function convert(x){
+      if (x == 1){
+        x = "#FFFFFF";
+      } else if (x == 2){
+        x = "#00FF00";
+      } else if (x == 3){
+        x = "#FF0000";
+      } else if (x == 4){
+        x = "#0000FF";
+      } else if (x == 5){
+        x = "#FF9900";
+      } else if (x == 6){
+        x = "#FFFF00";
+      }
+      return x;
+  }
   // render the cube centers
   function renderCenters(){
     ctx.fillStyle = "#FF9900"; // orange
@@ -73,24 +90,6 @@ the canvas, sorry about that!</canvas>
     ctx.fillStyle = "#FFFF00"; // yellow
     ctx.fillRect(108,245,26,26);
   }
-  
-  // change from number to colour
-  function convert(x){
-    if (x == 1){
-      return "#FFFFFF";
-    } else if (x == 2){
-      return "#00FF00";
-    } else if (x == 3){
-      return "#FF0000";
-    } else if (x == 4){
-      return "#0000FF";
-    } else if (x == 5){
-      return "#FF9900";
-    } else if (x == 6){
-      return "#FFFF00";
-    }
-  }
-  
   // algorithms for M2 targets
   var m2a = "M2";
   var m2b = "R' U R U' M2 U R' U' R";
