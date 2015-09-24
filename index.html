@@ -39,17 +39,18 @@ the canvas, sorry about that!</canvas>
     ctx.fillStyle = col;
     
     ctx.fillRect(79,60,26,26);
-    next();
+    i++;
+    col = convert(cubeLayout[i]);
+    ctx.FillStyle = col;
     ctx.fillRect(108,60,26,26);
-    next();
+    i++;
+    col = convert(cubeLayout[i]);
+    ctx.FillStyle = col;
     ctx.fillRect(137,60,26,26);
-    next();
+    i++;
+    col = convert(cubeLayout[i]);
+    ctx.FillStyle = col;
     
-    function next(){
-      i++;
-      col = convert(cubeLayout[i]);
-      ctx.FillStyle = col;
-    }
   }
   
   // render the cube centers
