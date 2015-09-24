@@ -42,16 +42,20 @@ the canvas, sorry about that!</canvas>
   function renderCube(){
     renderCenters();
     var i = 1;
+    var colour;
     
-    ctx.fillStyle = "#" + cubeState[i];
+    colour = "#" + cubeState[i];
+    ctx.fillStyle = colour;
     ctx.fillRect(79,60,26,26);
     i++;
     
-    ctx.fillStyle = "#" + cubeState[i];
+    colour = "#" + cubeState[i];
+    ctx.fillStyle = colour;
     ctx.fillRect(108,60,26,26);
     i++;
     
-    ctx.fillStyle = "#" + cubeState[i];
+    colour = "#" + cubeState[i];
+    ctx.fillStyle = colour;
     ctx.fillRect(137,60,26,26);
     i++;
   }
