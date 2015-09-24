@@ -31,28 +31,31 @@ the canvas, sorry about that!</canvas>
   
   renderCube();
   // render the cube layout
-  var cubeLayout = [1,1,1,1,1,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6];
+  var cubeState = [];
+  cubeState.push("FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF","FFFFFF");
+  cubeState.push("00FF00","00FF00","00FF00","00FF00","00FF00","00FF00");
+  cubeState.push("FF0000","FF0000","FF0000","FF0000","FF0000","FF0000");
+  cubeState.push("0000FF","0000FF","0000FF","0000FF","0000FF","0000FF");
+  cubeState.push("FF9900","FF9900","FF9900","FF9900","FF9900","FF9900");
+  cubeState.push("FFFF00","FFFF00","FFFF00","FFFF00","FFFF00","FFFF00");
+  
   function renderCube(){
     renderCenters();
+    var i = 1;
+    
+    ctx.fillStyle = "#" + cubeState[i];
+    ctx.fillRect(79,60,26,26);
+    i++;
+    
+    ctx.fillStyle = "#" + cubeState[i];
+    ctx.fillRect(108,60,26,26);
+    i++;
+    
+    ctx.fillStyle = "#" + cubeState[i];
+    ctx.fillRect(137,60,26,26);
+    i++;
   }
   
-  // converts numbers into colours
-  function convert(x){
-      if (x == 1){
-        x = "#FFFFFF";
-      } else if (x == 2){
-        x = "#00FF00";
-      } else if (x == 3){
-        x = "#FF0000";
-      } else if (x == 4){
-        x = "#0000FF";
-      } else if (x == 5){
-        x = "#FF9900";
-      } else if (x == 6){
-        x = "#FFFF00";
-      }
-      return x;
-  }
   // render the cube centers
   function renderCenters(){
     ctx.fillStyle = "#FF9900"; // orange
