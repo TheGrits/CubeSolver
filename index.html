@@ -34,24 +34,45 @@ the canvas, sorry about that!</canvas>
   var cubeLayout = [1,1,1,1,1,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6];
   function renderCube(){
     renderCenters();
+    var i = 1;
+    var col = convert(cubeLayout[i]);
+    ctx.fillStyle = col;
     
+    ctx.fillRect(79,60,26,26);
+    next();
+    ctx.fillRect(108,60,26,26);
+    next();
+    ctx.fillRect(137,60,26,26);
+    next();
+    
+    function next(){
+      i++;
+      col = convert(cubeLayout[i]);
+      ctx.FillStyle = col;
+    }
   }
   
   // render the cube centers
   function renderCenters(){
     ctx.fillStyle = "#FF9900"; // orange
     ctx.fillRect(30,167,26,26);
+    
     ctx.fillStyle = "#00FF00"; // green
     ctx.fillRect(108,167,26,26);
+    
     ctx.fillStyle = "#FF0000"; // red
     ctx.fillRect(186,167,26,26);
+    
     ctx.fillStyle = "#0000FF"; // blue
     ctx.fillRect(264,167,26,26);
+    
     ctx.fillStyle = "#FFFFFF"; // white
     ctx.fillRect(108,89,26,26);
+    
     ctx.fillStyle = "#FFFF00"; // yellow
     ctx.fillRect(108,245,26,26);
   }
+  
   // change from number to colour
   function convert(x){
     if (x == 1){
